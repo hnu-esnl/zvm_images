@@ -5,7 +5,7 @@ Supported Platforms
 1. qemu-system-aarch64 Precompiled QEMU Binary
 ------------------------------------------------------
 
-Two additional serial ports are added to display the terminal of the VM console. For details, see the README.rst file in the qemu directory.
+Required version: qemu-8.2.0+.
 
 2. Virtual Machine Image Running on qemu-max Platform
 ------------------------------------------------------
@@ -40,4 +40,5 @@ The script contains commands to run ZVM using the precompiled QEMU binary, inclu
 Place zvm_host.elf in the qemu_arm64 directory, then run the auto_zvm.sh script to start the ZVM hypervisor.
 
 .. note::
-    You can use zvm_host_test.elf instead of zvm_host.elf for early testing.
+    You can use './auto_zvm.sh test' for default testing. The script will use
+    zvm_host_test.elf instead of zvm_host.elf for early testing.
